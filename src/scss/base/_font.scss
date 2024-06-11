@@ -1,0 +1,72 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+h1, h2, h3 {
+    font-family: v.$main_font;
+    margin: 0 0 calc(v.$separation / 2) 0 ;
+    font-weight: 900;
+    color: v.$white;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+
+    @include m.phone {
+        font-size: 2.8rem;
+    }
+}
+
+h3 {
+    font-size: 3rem;
+    text-align: center;
+
+    @include m.phone {
+        font-size: 2.7rem;
+    }
+}
+
+p {
+    color: v.$white;
+    font-size: 2rem;
+
+    @include m.phone {
+        font-size: 1.8rem;
+    }
+}
+
+label {
+    color: v.$white;
+    font-size: 1.7rem;
+}
+
+.page-name {
+    text-align: center;
+    margin: 7rem 0 2.5rem 0;
+    font-weight: v.$bold;
+
+    @include m.phone {
+        font-size: 3rem;
+        margin: 4rem 0 2.5rem 0;
+    }
+}
+
+#margin-top {
+    margin-top: 3rem;
+}
+
+#margin-bottom {
+    margin-bottom: 4rem;
+}
+
+.page-description {
+    text-align: center;
+
+    &.error {
+        color: rgb(233, 67, 67);
+    }
+}

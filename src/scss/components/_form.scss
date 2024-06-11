@@ -1,0 +1,47 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.form {
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+
+    label {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    input {
+        height: 3.2rem;
+        border: none;
+        border-radius: .5rem;
+        width: 100%; /* Ensure full width for inputs */
+    }
+}
+
+.field.two-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2%; /* Add gap between columns */
+}
+
+.field.two-columns .column {
+    flex: 1; /* Allow columns to grow */
+    max-width: 48%; /* Ensure columns don't exceed 48% of the container */
+
+    label {
+        display: block; 
+        margin-bottom: 1rem;
+    }
+
+    input {
+        width: 100%;
+        color: black;
+    }
+}

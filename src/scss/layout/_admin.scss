@@ -1,0 +1,49 @@
+@use 'base/variables' as v;
+
+.appointments {
+    list-style: none;
+    padding: 0;
+
+    li {
+        padding: 1rem;
+        border-top: 1px solid v.$white;
+
+        p {
+            font-weight: v.$bold;
+            color: v.$blue;
+        }
+
+        .service,
+        span {
+            font-weight: v.$regular;
+            color: v.$white;
+
+            &.price {
+                font-weight: v.$bold;
+                color: v.$blue;
+            }
+        }
+    }
+}
+
+.services {
+    @extend .appointments;
+
+    .actions {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button,
+    .delete-button {
+        width: 28.4rem;
+        font-size: 1.5rem;
+        margin: 0rem 0 1.5rem 0;
+    }
+
+    .delete-button {
+        width: 28rem;
+    }
+}

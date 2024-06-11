@@ -1,0 +1,1 @@
+function showAlert(){document.querySelector("#create").addEventListener("submit",(()=>{Swal.fire({icon:"success",title:"Listo!",text:"Ha creado un nuevo servicio!"})}))}

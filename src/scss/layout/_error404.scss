@@ -1,0 +1,20 @@
+@use 'base/mixins' as m;
+
+.error {
+    display: flex;
+    justify-content: center;
+    
+    .icon-error {
+        @include m.tablet {
+            width: 25rem;
+            margin-bottom: 3rem;
+            filter: invert(1);
+        }
+
+        @include m.phone {
+            width: 13rem;
+            margin-bottom: 3rem;
+            filter: invert(1);
+        }
+    }
+}

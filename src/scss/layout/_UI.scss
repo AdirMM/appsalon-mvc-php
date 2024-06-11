@@ -1,0 +1,81 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.app-container {
+    @include m.tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        min-height: 100vh;
+    }
+
+    .image {
+        height: 20rem;
+        background-image: url('../img/1.jpg');
+        background-position: center center;
+        background-size: cover;
+
+        @include m.tablet {
+            height: auto;
+        }
+    }
+
+    .app {
+        width: 95%;
+        margin: 0 auto;
+        padding: 0rem 0;
+
+        @include m.tablet {
+            overflow: scroll;
+            overflow-x: hidden;
+            margin-right: 0;
+            padding-right: 1.5rem;
+            padding-left: 1.5rem;
+
+            &::-webkit-scrollbar {
+                width: 0.9rem;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: rgba(255, 255, 255, .4);
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+.bar {
+    @include m.tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    a {
+        position: absolute;
+        top: -6px;
+        right: 0px;
+    }
+
+    .icon-logout {
+        width: 3rem;
+        margin: 3.2rem 1.5rem 2rem 0;
+        filter: invert(100);
+    }
+}
+
+.service-bar {
+    margin: 0 2rem 3rem 2rem;
+
+    @include m.tablet {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    a {
+        margin: 1rem 0 1rem 0;
+    }
+
+    &.appointment {
+        margin: 8rem 2rem 0 2rem;
+    }
+}
