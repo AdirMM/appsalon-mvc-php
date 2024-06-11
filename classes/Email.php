@@ -20,18 +20,18 @@ class Email
 
     public function sendConfirmation()
     {
-        // Crear el objeto de email
         $mail = new PHPMailer();
         $mail->isSMTP();
-        $mail->Host = $_ENV['EMAIL_HOST'];
+        $mail->Host = $_ENV['MAIL_HOST'];
         $mail->SMTPAuth = true;
-        $mail->Port = $_ENV['EMAIL_PORT'];
-        $mail->Username = $_ENV['EMAIL_USER'];
-        $mail->Password = $_ENV['EMAIL_PASS'];
+        $mail->Port = $_ENV['MAIL_PORT'];
+        $mail->Username = $_ENV['MAIL_USER'];
+        $mail->Password = $_ENV['MAIL_PASS'];
+        $mail->SMTPSecure = 'tls'; // O 'ssl' dependiendo de la configuración de Brevo
 
-        $mail->setFrom('cuentas@appsalon.com');
-        $mail->addAddress('cuentas@appsalon.com', 'AppSalon.com');
-        $mail->Subject = 'Confirma tu cuenta';
+        $mail->setFrom('adrianmi20041401@gmail.com', 'AppSalon.com');
+        $mail->addAddress($this->email, $this->name);
+        $mail->Subject = 'Reestablece tu password';
 
         // Set HTML
         $mail->isHTML(TRUE);
@@ -53,14 +53,15 @@ class Email
         // Crear el objeto de email
         $mail = new PHPMailer();
         $mail->isSMTP();
-        $mail->Host = $_ENV['EMAIL_HOST'];
+        $mail->Host = $_ENV['MAIL_HOST'];
         $mail->SMTPAuth = true;
-        $mail->Port = $_ENV['EMAIL_PORT'];
-        $mail->Username = $_ENV['EMAIL_USER'];
-        $mail->Password = $_ENV['EMAIL_PASS'];
+        $mail->Port = $_ENV['MAIL_PORT'];
+        $mail->Username = $_ENV['MAIL_USER'];
+        $mail->Password = $_ENV['MAIL_PASS'];
+        $mail->SMTPSecure = 'tls'; // O 'ssl' dependiendo de la configuración de Brevo
 
-        $mail->setFrom('cuentas@appsalon.com');
-        $mail->addAddress('cuentas@appsalon.com', 'AppSalon.com');
+        $mail->setFrom('adrianmi20041401@gmail.com', 'AppSalon.com');
+        $mail->addAddress($this->email, $this->name);
         $mail->Subject = 'Reestablece tu password';
 
         // Set HTML
