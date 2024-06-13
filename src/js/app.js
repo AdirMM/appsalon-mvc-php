@@ -107,7 +107,7 @@ function laterPage() {
 async function queryAPI() {
 
     try {
-        const url = `/api/services`;
+        const url = '/api/services';
         const result = await fetch(url);
         const services = await result.json();
         showServices(services);
@@ -331,7 +331,7 @@ async function reserveAppointment() {
 
     try {
         // Peticion hascia la api
-        const url = `/api/appointments`;
+        const url = '/api/appointments';
         const response = await fetch(url, {
             method: 'POST',
             body: data
