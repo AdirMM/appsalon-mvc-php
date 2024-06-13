@@ -23,7 +23,7 @@
     
     <div class="field">
         <label for="email">Email</label>
-        <input name="email" type="text" id="email" placeholder="correo@correo.com" value="<?php echo s($user->email) ?>">
+        <input name="email" type="email" id="email" placeholder="correo@correo.com" value="<?php echo s($user->email) ?>">
     </div>
 
     <div class="field">
