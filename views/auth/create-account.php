@@ -18,7 +18,7 @@
 
     <div class="field">
         <label for="phone_number">Telefono</label>
-        <input name="phone_number" type="number" id="phone_number" placeholder="Ej. 6648821234" value="<?php echo s($user->phone_number) ?>">
+        <input name="phone_number" type="tel" id="phone_number" placeholder="Ej. 6648821234" value="<?php echo s($user->phone_number) ?>">
     </div>
     
     <div class="field">
@@ -32,8 +32,8 @@
     </div>
 
     <input type="submit" class="button" value="Crear Cuenta">
-
-    <div class="actions">
-        <a href="/">Ya tengo una cuenta</a>
-    </div>
 </form>
+
+<div class="actions">
+        <a href="/">Ya tengo una cuenta</a>
+</div>
