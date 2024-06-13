@@ -5,3 +5,8 @@
 </div>
 
 <p class="page-description error">La pagina a la que intentar ingresar no existe.</p>
+
+<div class="actions">
+        <a href="javascript:history.back()" class="button">Volver Atrás</a>
+        <a href="/" class="button">Ir a la Página Principal</a>
+</div>
