@@ -61,11 +61,6 @@ class User extends ActiveRecord
             $user = $result->fetch_assoc(); //Obten los datos del usuario en un array asociativo
 
             self::$alerts['error'][] = 'El correo electronico ya esta registrado, intenta de nuevo';
-
-            $phone_number = $user['phone_number'];
-            if ($phone_number) {
-                self::$alerts['error'][] = 'El numero de telefono que ingresaste esta asociado a otra cuenta.';
-            }
         }
 
         return $result;
