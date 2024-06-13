@@ -31,7 +31,7 @@ class Email
 
         $mail->setFrom('adrianmi20041401@gmail.com', 'AppSalon.com');
         $mail->addAddress($this->email, $this->name);
-        $mail->Subject = 'Reestablece tu password';
+        $mail->Subject = 'Confirma tu Cuenta';
 
         // Set HTML
         $mail->isHTML(TRUE);
