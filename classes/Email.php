@@ -27,7 +27,7 @@ class Email
         $mail->Port = $_ENV['MAIL_PORT'];
         $mail->Username = $_ENV['MAIL_USER'];
         $mail->Password = $_ENV['MAIL_PASS'];
-        $mail->SMTPSecure = 'tls'; // O 'ssl' dependiendo de la configuración de Brevo
+        $mail->SMTPSecure = 'ssl'; // O 'ssl' dependiendo de la configuración de Brevo
 
         $mail->setFrom('adrianmi20041401@gmail.com', 'AppSalon.com');
         $mail->addAddress($this->email, $this->name);
@@ -58,7 +58,7 @@ class Email
         $mail->Port = $_ENV['MAIL_PORT'];
         $mail->Username = $_ENV['MAIL_USER'];
         $mail->Password = $_ENV['MAIL_PASS'];
-        $mail->SMTPSecure = 'tls'; // O 'ssl' dependiendo de la configuración de Brevo
+        $mail->SMTPSecure = 'ssl'; // O 'ssl' dependiendo de la configuración de Brevo
 
         $mail->setFrom('adrianmi20041401@gmail.com', 'AppSalon.com');
         $mail->addAddress($this->email, $this->name);
