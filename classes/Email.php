@@ -70,7 +70,7 @@ class Email
 
         $content = "<html>";
         $content .= "<p> <strong>Hola " . $this->name . "</strong> Has solicitado reestablecer tu password, da click en el siguiente enlace para cambiar tu contraseña:</p>";
-        $content .= "<p>Presiona aqui: <a href='" . $_ENV['APP_URL'] . "/recover?token=". $this->token ."'>Reestablecer Password</a> </p>";
+        $content .= "<p>Presiona aqui: <a href='". $_ENV['APP_URL'] ."/recover?token=". $this->token ."'>Reestablecer Password</a> </p>";
         $content .= "<p>Si tu no solicitaste esta cuenta, puedes ignorar este correo.</p>";
         $content .= "</html>";
 
