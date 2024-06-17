@@ -39,7 +39,7 @@ class Email
 
         $content = "<html>";
         $content .= "<p> <strong>Hola " . $this->name . "</strong> Has creado tu cuenta en App Salon, solo debes confirmarla presionando en el siguiente enlace:</p>";
-        $content .= "<p>Presiona aqui: <a href='" . $_ENV['APP_URL'] . "/confirm-account?token=". $this->token ."'>Confirmar cuenta</a> </p>";
+        $content .= "<p>Presiona aqui: <a href='". $_ENV['APP_URL'] ."/confirm-account?token=". $this->token ."'>Confirmar cuenta</a> </p>";
         $content .= "<p>Si tu no solicitaste esta cuenta, puedes ignorar este correo.</p>";
         $content .= "</html>";
 
